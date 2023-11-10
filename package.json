@@ -1,14 +1,14 @@
 {
   "name": "dimando-ui",
   "author": "HYPERS Team",
-  "description": "",
+  "description": "UI framework test",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "",
-  "bugs": "",
+  "homepage": "https://github.com/me-jasmin/dimando-ui",
+  "bugs": "https://github.com/me-jasmin/dimando-ui/issues",
   "repository": {
     "type": "git",
-    "url": "git+PATH.git"
+    "url": "git+https://github.com/me-jasmin/dimando-ui.git"
   },
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/index.esm.js",
