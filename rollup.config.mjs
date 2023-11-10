@@ -74,7 +74,7 @@ function component(commonPlugins, folder) {
         targets: [
           { src: [`src/${folder}/${folder}.stories.tsx`, `src/${folder}/${toKebabCase(folder)}.styles.scss`], dest: `dist/${folder}` },
         ]
-      })
+      }),
     ],
     // Don't bundle node_modules and ../utils
     //
@@ -103,7 +103,11 @@ export default [
         format: 'cjs',
       }
     ],
-    plugins: commonPlugins,
+    plugins: [...commonPlugins, postcss(), copy({
+      targets: [
+        { src: "./package.json", dest: "dist/" },
+      ]
+    })],
     external: [/node_modules/],
   },
 ];

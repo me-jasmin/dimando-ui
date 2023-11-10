@@ -41,3 +41,5 @@ jest.config.js
 .babelrc.json
 .prettierignore
 .prettierrc
+package.json
+package-lock.yaml
