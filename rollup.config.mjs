@@ -80,7 +80,7 @@ function component(commonPlugins, folder) {
     //
     // We should also exclude relative imports of other components, but a trivial exclude of /\.\./ does not work
     // It may require changes to the way the components are exported
-    external: [/node_modules/],
+    external: ["node_modules", "react", "react-dom"],
   };
 }
 
@@ -108,7 +108,7 @@ export default [
         { src: "./package.json", dest: "dist/" },
       ]
     })],
-    external: [/node_modules/],
+    external: ["node_modules", "react", "react-dom"],
   },
 ];
 
