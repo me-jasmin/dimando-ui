@@ -1,0 +1,21 @@
+{
+  "name": "dimando-ui.contentcard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/cjs/ContentCard/index.js",
+  "module": "lib/es/ContentCard/index.js",
+  "types": "lib/es/ContentCard/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+PATH.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <11"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

@@ -12,7 +12,8 @@
 /coverage
 
 # production
-/dist
+/src
+/scripts
 
 # misc
 .DS_Store
@@ -28,6 +29,15 @@ yarn-error.log*
 .vscode
 *.bak
 
+.storybook
 storybook-static
 storybook-build
 
+# root files
+tsconfig.json
+rollup.config.mjs
+jest.config.js
+.gitignore
+.babelrc.json
+.prettierignore
+.prettierrc
