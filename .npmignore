@@ -1,4 +1,4 @@
-# https://help.github.com/articles/ignoring-files/
+# docs https://docs.npmjs.com/cli/v10/using-npm/developers#keeping-files-out-of-your-package
 
 # dependencies
 /node_modules
@@ -10,9 +10,6 @@
 
 # testing
 /coverage
-
-# production
-/scripts
 
 # misc
 .DS_Store
@@ -28,6 +25,7 @@ yarn-error.log*
 .vscode
 *.bak
 
+# storybook
 .storybook
 storybook-static
 storybook-build

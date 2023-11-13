@@ -1,1 +1,1 @@
-# My Demo UI Library
+# Dimando UI

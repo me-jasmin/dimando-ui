@@ -1,2 +1,4 @@
-export { default as Alert } from "./Alert";
+import Alert from './Alert';
 export type { AlertProps } from './Alert';
+
+export default Alert;

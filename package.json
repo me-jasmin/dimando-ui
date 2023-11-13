@@ -1,8 +1,8 @@
 {
   "name": "dimando-ui",
-  "author": "HYPERS Team",
+  "author": "",
   "description": "UI framework test",
-  "version": "0.0.4",
+  "version": "0.0.40",
   "license": "MIT",
   "homepage": "https://github.com/me-jasmin/dimando-ui",
   "bugs": "https://github.com/me-jasmin/dimando-ui/issues",
@@ -10,16 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/me-jasmin/dimando-ui.git"
   },
-  "main": "dist/cjs/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "index.cjs.js",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "generate:packages": "node ./scripts/generatePackages.js"
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.3",
@@ -66,8 +65,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "browserslist": [
     "> 1%",

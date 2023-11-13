@@ -1,7 +1,5 @@
 import React, { type FC, type MouseEventHandler } from 'react';
 
-import './button.styles.scss';
-
 export interface ButtonProps {
     label: string;
     size?: 'lg' | 'md' | 'sm';
@@ -29,7 +27,7 @@ export interface ButtonProps {
  * @param {boolean} isDarkMode - default `false`
  * @returns Button
  */
- 
+
 const Button: FC<ButtonProps> = ({ label, size = 'md', type = 'button', btnType = 'primary', className, onClick, shape = 'default', styles, isDarkMode = false }) => {
     return (
         <button type={type} className={`button ${size} ${btnType} ${shape} ${isDarkMode === true && `dark`} ${className}`} style={styles} onClick={onClick}>

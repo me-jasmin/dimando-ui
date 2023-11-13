@@ -1,6 +1,5 @@
 import React, { type FC } from 'react';
 
-import './content-card.styles.scss';
 export interface ContentCardProps {
     text: string;
 }
