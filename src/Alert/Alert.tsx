@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 
 export interface AlertProps {
     message: string;
@@ -6,7 +6,7 @@ export interface AlertProps {
     styles?: object;
 }
 
-const Alert: React.FC<AlertProps> = ({ message, type = 'default', styles }) => {
+const Alert: FC<AlertProps> = ({ message, type = 'default', styles }) => {
     return (
         <div className={`container`}>
             <div className={`alert ${type}`} style={styles}>

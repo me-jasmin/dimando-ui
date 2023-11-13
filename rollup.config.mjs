@@ -2,14 +2,15 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import replace from '@rollup/plugin-replace';
-import copy from 'rollup-plugin-copy';
 import terser from "@rollup/plugin-terser";
+import copy from 'rollup-plugin-copy';
 import generatePackageJson from 'rollup-plugin-generate-package-json';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import fs from 'fs';
 
 import rootPackages from './package.json';
 
+// eslint-disable-next-line no-sync
 const componentFolders = fs.readdirSync('./src').filter(name => name !== 'index.ts');
 
 const sharedPlugins = [
