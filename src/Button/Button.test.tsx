@@ -1,12 +1,39 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
+import Button, { ButtonProps } from './Button';
+
 import '@testing-library/jest-dom';
 
-import Button from './Button';
+const renderButton = (props: ButtonProps) => {
+    return render(<Button {...props} />);
+};
 
-describe('Running Test for Marbella Button', () => {
-    test('Check Button Disabled', () => {
-        render(<Button text="Button marbella" disabled />);
-        expect(screen.getByRole('button', { name: 'Button marbella' })).toBeDisabled();
+test('renders button component with default props', () => {
+    const { getByText } = renderButton({ children: 'Click me' });
+    const button = getByText('Click me');
+    expect(button).toBeInTheDocument();
+});
+
+test('renders button component with custom props', () => {
+    const { getByText } = renderButton({
+        children: 'Submit',
+        size: 'lg',
+        appearance: 'secondary',
+        shape: 'rounded',
+        className: 'custom-class',
+        isDarkMode: true,
     });
+
+    const button = getByText('Submit');
+    expect(button).toHaveClass('button lg secondary rounded dark custom-class');
+});
+
+test('calls onClick handler when button is clicked', () => {
+    const handleClick = jest.fn();
+    const { getByText } = renderButton({ children: 'Click me', onClick: handleClick });
+
+    const button = getByText('Click me');
+    fireEvent.click(button);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
 });
