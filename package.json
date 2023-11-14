@@ -15,6 +15,7 @@
     "types": "index.d.ts",
     "sideEffects": false,
     "scripts": {
+        "eject": "react-scripts eject",
         "test:jest": "jest --config jest.config.js --passWithNoTests",
         "test:cypress": "cypress open",
         "bundle": "rimraf dist && pnpm lint:ts && pnpm lint:scss && rollup -c --bundleConfigAsCjs",
@@ -93,6 +94,7 @@
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-scripts": "^5.0.1",
         "react-test-renderer": "^18.2.0",
         "rimraf": "^5.0.5",
         "rollup": "^4.4.1",
