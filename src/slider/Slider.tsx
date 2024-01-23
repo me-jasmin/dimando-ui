@@ -1,14 +1,14 @@
 // @ts-nocheck
 
-import React, { Children, useMemo } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { Children, FC, useMemo } from 'react';
+import { Swiper, SwiperSlide, SwiperProps } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
 
 /* import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination'; */
 
-const Slider = ({ children, ...props }) => {
+const Slider: FC<SwiperProps> = ({ children, ...props }) => {
     const defaultProps = {
         slidesPerView: 3,
         autoHeight: true,

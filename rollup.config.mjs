@@ -2,7 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import replace from '@rollup/plugin-replace';
-import terser from "@rollup/plugin-terser";
+import terser from '@rollup/plugin-terser';
 import copy from 'rollup-plugin-copy';
 import generatePackageJson from 'rollup-plugin-generate-package-json';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -11,7 +11,7 @@ import fs from 'fs';
 import rootPackages from './package.json';
 
 // eslint-disable-next-line no-sync
-const componentFolders = fs.readdirSync('./src').filter(name => name !== 'index.ts');
+const componentFolders = fs.readdirSync('./src').filter(name => name !== 'index.ts' && name !== 'styles');
 
 const sharedPlugins = [
     peerDepsExternal(),
@@ -24,8 +24,8 @@ const sharedPlugins = [
     typescript({
         tsconfig: './tsconfig.json',
         useTsconfigDeclarationDir: true,
-        tsconfigOverride: { compilerOptions: { "rootDir": "src" } },
-        exclude: ["**/*.cy.ts", "**/*.cy.tsx", "**/*.test.ts", "**/*.test.tsx"]
+        tsconfigOverride: { compilerOptions: { rootDir: 'src' } },
+        exclude: ['**/*.cy.ts', '**/*.cy.tsx', '**/*.test.ts', '**/*.test.tsx'],
     }),
     terser(),
 ];
@@ -83,7 +83,10 @@ export default [
         plugins: [
             ...sharedPlugins,
             copy({
-                targets: [{ src: './package.json', dest: 'dist/' }],
+                targets: [
+                    { src: './package.json', dest: 'dist/' },
+                    { src: './src/styles', dest: 'dist/' },
+                ],
             }),
         ],
         external: ['node_modules', 'react', 'react-dom', /\.(css|less|scss)$/],
