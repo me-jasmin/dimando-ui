@@ -1,0 +1,19 @@
+@use '../styles/variables' as *;
+
+.di-card-container {
+    display: inline-block;
+    padding: $card-container-padding;
+    background-color: var(--card-container-background-color);
+
+    @if $card-container-border-width {
+        border: $card-container-border-width solid var(--card-container-border-color);
+    }
+
+    @if $el-border-radius {
+        border-radius: $el-border-radius;
+    }
+
+    @if $el-box-shadow {
+        box-shadow: $el-box-shadow;
+    }
+}

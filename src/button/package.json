@@ -1,0 +1,21 @@
+{
+  "name": "dimando-ui.button",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/cjs/Button/index.js",
+  "module": "lib/es/Button/index.js",
+  "types": "lib/es/Button/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+PATH.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <11"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

@@ -1,0 +1,15 @@
+@use 'light' as *;
+@use 'dark' as *;
+
+$dark-mode: true;
+
+:root,
+.di--light {
+    @include light-vars;
+}
+
+@if $dark-mode {
+    .di--dark {
+        @include dark-vars;
+    }
+}

@@ -1,0 +1,16 @@
+@use '~reset-css/sass/reset';
+
+@use 'custom';
+@use 'base';
+@use 'color-mode';
+
+@use '~swiper/scss';
+@use '~swiper/scss/free-mode';
+@use '~swiper/scss/pagination';
+@use '../slider/slider.styles.scss';
+
+@use '../card/card.styles.scss';
+
+@use '../card-container/card-container.styles.scss';
+
+@use '../button/button.styles.scss';

@@ -1,0 +1,109 @@
+@use 'colors' as *;
+
+@mixin light-vars {
+    --page-background-color: #{$white};
+
+    // Button primary
+    --btn-primary-text: #{$white};
+    --btn-primary-background-color: #{$primary-500};
+    --btn-primary-hover-background-color: #{$primary-400};
+    --btn-primary-active-text: #{$primary-900};
+    --btn-primary-active-background-color: #{$primary-500};
+    --btn-primary-focus-color: #{$primary-400};
+    --btn-primary-disabled-text: #{$white};
+    --btn-primary-disabled-background-color: #{$primary-200};
+
+    // Button secondary
+    --btn-secondary-text: #{$white};
+    --btn-secondary-background-color: #{$secondary-300};
+    --btn-secondary-hover-background-color: #{$secondary-400};
+    --btn-secondary-active-text: #{$secondary-900};
+    --btn-secondary-active-background-color: #{$secondary-500};
+    --btn-secondary-focus-color: #{$secondary-400};
+    --btn-secondary-disabled-text: #{$secondary-500};
+    --btn-secondary-disabled-background-color: #{$secondary-200};
+
+    // Button color-1
+    --btn-color-1-text: #{$white};
+    --btn-color-1-background-color: #{$color-1-500};
+    --btn-color-1-hover-background-color: #{$color-1-400};
+    --btn-color-1-active-text: #{$color-1-900};
+    --btn-color-1-active-background-color: #{$color-1-500};
+    --btn-color-1-focus-color: #{$color-1-400};
+    --btn-color-1-disabled-text: #{$white};
+    --btn-color-1-disabled-background-color: #{$color-1-200};
+
+    // Button color-2
+    --btn-color-2-text: #{$white};
+    --btn-color-2-background-color: #{$color-2-500};
+    --btn-color-2-hover-background-color: #{$color-2-400};
+    --btn-color-2-active-text: #{$color-2-900};
+    --btn-color-2-active-background-color: #{$color-2-500};
+    --btn-color-2-focus-color: #{$color-2-400};
+    --btn-color-2-disabled-text: #{$white};
+    --btn-color-2-disabled-background-color: #{$color-2-200};
+
+    // Button color-3
+    --btn-color-3-text: #{$white};
+    --btn-color-3-background-color: #{$color-3-500};
+    --btn-color-3-hover-background-color: #{$color-3-400};
+    --btn-color-3-active-text: #{$color-3-900};
+    --btn-color-3-active-background-color: #{$color-3-500};
+    --btn-color-3-focus-color: #{$color-3-400};
+    --btn-color-3-disabled-text: #{$white};
+    --btn-color-3-disabled-background-color: #{$color-3-200};
+
+    // Button color-4
+    --btn-color-4-text: #{$white};
+    --btn-color-4-background-color: #{$color-4-500};
+    --btn-color-4-hover-background-color: #{$color-4-400};
+    --btn-color-4-active-text: #{$color-4-900};
+    --btn-color-4-active-background-color: #{$color-4-500};
+    --btn-color-4-focus-color: #{$color-4-400};
+    --btn-color-4-disabled-text: #{$white};
+    --btn-color-4-disabled-background-color: #{$color-4-200};
+
+    // Button color-5
+    --btn-color-5-text: #{$white};
+    --btn-color-5-background-color: #{$color-5-500};
+    --btn-color-5-hover-background-color: #{$color-5-400};
+    --btn-color-5-active-text: #{$color-5-900};
+    --btn-color-5-active-background-color: #{$color-5-500};
+    --btn-color-5-focus-color: #{$color-5-400};
+    --btn-color-5-disabled-text: #{$white};
+    --btn-color-5-disabled-background-color: #{$color-5-200};
+
+    // Button color-6
+    --btn-color-6-text: #{$white};
+    --btn-color-6-background-color: #{$color-6-500};
+    --btn-color-6-hover-background-color: #{$color-6-400};
+    --btn-color-6-active-text: #{$color-6-900};
+    --btn-color-6-active-background-color: #{$color-6-500};
+    --btn-color-6-focus-color: #{$color-6-400};
+    --btn-color-6-disabled-text: #{$white};
+    --btn-color-6-disabled-background-color: #{$color-6-200};
+
+    // Button color-7
+    --btn-color-7-text: #{$white};
+    --btn-color-7-background-color: #{$color-7-500};
+    --btn-color-7-hover-background-color: #{$color-7-400};
+    --btn-color-7-active-text: #{$color-7-900};
+    --btn-color-7-active-background-color: #{$color-7-500};
+    --btn-color-7-focus-color: #{$color-7-400};
+    --btn-color-7-disabled-text: #{$white};
+    --btn-color-7-disabled-background-color: #{$color-7-200};
+
+    // Button color-8
+    --btn-color-8-text: #{$white};
+    --btn-color-8-background-color: #{$color-8-500};
+    --btn-color-8-hover-background-color: #{$color-8-400};
+    --btn-color-8-active-text: #{$color-8-900};
+    --btn-color-8-active-background-color: #{$color-8-500};
+    --btn-color-8-focus-color: #{$color-8-400};
+    --btn-color-8-disabled-text: #{$white};
+    --btn-color-8-disabled-background-color: #{$color-8-200};
+
+    // Card Container
+    --card-container-background-color: #{$white};
+    --card-container-border-color: #{$gray-200};
+}

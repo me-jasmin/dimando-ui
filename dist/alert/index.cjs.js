@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("react");exports.default=({message:t,type:a="default",styles:s})=>e.createElement("div",{className:"container"},e.createElement("div",{className:`alert ${a}`,style:s},t));

@@ -1,0 +1,35 @@
+@use 'colors' as *;
+
+@mixin dark-vars {
+    --page-background-color: #{$secondary-900};
+
+    // Button default
+    --btn-default-text: #{$white};
+    --btn-default-background-color: #{$secondary-700};
+    --btn-default-hover-background-color: #{$secondary-800};
+    --btn-default-active-text: #{$secondary-100};
+    --btn-default-active-background-color: #{$secondary-600};
+    --btn-default-focus-color: #{$secondary-800};
+    --btn-default-disabled-text: #{$secondary-600};
+    --btn-default-disabled-background-color: #{$secondary-800};
+
+    // Button primary
+    --btn-primary-text: #{$white};
+    --btn-primary-background-color: #{$primary-700};
+    --btn-primary-hover-background-color: #{$primary-800};
+    --btn-primary-active-text: #{$primary-100};
+    --btn-primary-active-background-color: #{$primary-600};
+    --btn-primary-focus-color: #{$primary-800};
+    --btn-primary-disabled-text: #{$primary-100};
+    --btn-primary-disabled-background-color: #{$primary-800};
+
+    // Button color-1
+    --btn-color-1-text: #{$white};
+    --btn-color-1-background-color: #{$color-1-700};
+    --btn-color-1-hover-background-color: #{$color-1-800};
+    --btn-color-1-active-text: #{$color-1-100};
+    --btn-color-1-active-background-color: #{$color-1-600};
+    --btn-color-1-focus-color: #{$color-1-800};
+    --btn-color-1-disabled-text: #{$white};
+    --btn-color-1-disabled-background-color: #{$color-1-800};
+}

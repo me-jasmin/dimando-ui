@@ -1,0 +1,55 @@
+import { Meta, Typeset, Canvas, Story } from '@storybook/blocks';
+import Typography from './Typography';
+
+<Meta title="Global/Typography" />
+
+export const settings = {
+    type: {
+        primary: 'Quattrocento, Georgia, "Times New Roman", Times, serif',
+    },
+    weight: {
+        regular: '400',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
+    },
+    size: {
+        h1: 42,
+        h2: 34,
+        h3: 30,
+        h4: 24,
+        h5: 20,
+        h6: 16,
+        p: 14,
+        small: 11,
+    },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# Typography
+
+**Font:** Quattrocento
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<Typeset
+    fontSizes={[
+        Number(settings.size.h1),
+        Number(settings.size.h2),
+        Number(settings.size.h3),
+        Number(settings.size.h4),
+        Number(settings.size.h5),
+        Number(settings.size.h6),
+        Number(settings.size.p),
+        Number(settings.size.small),
+
+    ]}
+    fontWeight={settings.weight.regular}
+    sampleText={SampleText}
+    fontFamily={settings.type.primary}
+
+/>
+
+<Typography />
+
