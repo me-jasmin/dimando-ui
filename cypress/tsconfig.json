@@ -1,0 +1,15 @@
+// docs https://www.typescriptlang.org/tsconfig
+{
+    "compilerOptions": {
+        "noEmit": false,
+        "esModuleInterop": true,
+        "strict": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "lib": ["es5", "dom"],
+        "types": ["node", "cypress"]
+    },
+    "include": ["./**/*.ts", "../cypress.config.ts"],
+    "exclude": ["node_modules"]
+}

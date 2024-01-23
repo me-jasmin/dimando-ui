@@ -24,6 +24,8 @@ const sharedPlugins = [
     typescript({
         tsconfig: './tsconfig.json',
         useTsconfigDeclarationDir: true,
+        tsconfigOverride: { compilerOptions: { "rootDir": "src" } },
+        exclude: ["**/*.cy.ts", "**/*.cy.tsx", "**/*.test.ts", "**/*.test.tsx"]
     }),
     terser(),
 ];

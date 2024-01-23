@@ -1,0 +1,11 @@
+{
+  "name": "@dimando-ui/content-card",
+  "private": true,
+  "main": "./index.cjs.js",
+  "module": "./index.esm.js",
+  "types": "./index.d.ts",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

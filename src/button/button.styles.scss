@@ -1,0 +1,73 @@
+@use '../styles/variables' as *;
+@use '../styles/util' as *;
+
+.di-button {
+    $self: &;
+
+    display: inline-flex;
+    padding: $el-space-y-md $el-space-x-md;
+    font-size: $font-size-md;
+    font-weight: 600;
+    line-height: $line-height-md;
+    color: var(--btn-default-text);
+    cursor: pointer;
+    background-color: var(--btn-default-background-color);
+    border: 1px solid var(--btn-default-background-color);
+    outline: none;
+    align-items: center;
+    justify-content: center;
+
+    @include add-transition(border-color color transform background-color, 200ms, ease-in-out);
+
+    @if $el-border-radius {
+        border-radius: $el-border-radius;
+    }
+
+    &:disabled {
+        color: var(--btn-default-disabled-text);
+        cursor: not-allowed;
+        background-color: var(--btn-default-disabled-background-color);
+        border: 1px solid var(--btn-default-disabled-background-color);
+    }
+
+    &:not(:disabled, .disabled):disabled:hover {
+        background-color: var(--btn-default-hover-background-color);
+        border: 1px solid var(--btn-default-hover-background-color);
+    }
+
+    &:not(:disabled, .disabled):disabled:active {
+        background-color: var(--btn-default-active-background-color);
+        border: 1px solid var(--btn-default-active-background-color);
+        transform: scale(0.95);
+    }
+
+    &:not(:disabled, .disabled):disabled:focus {
+        background-color: var(--btn-default-focus-color);
+        border: 1px solid var(--btn-default-focus-color);
+    }
+
+    &--block {
+        display: flex;
+        width: 100%;
+    }
+
+    &--lg {
+        padding: $el-space-y-md $el-space-x-lg;
+        font-size: $font-size-lg;
+        line-height: $line-height-lg;
+    }
+
+    &--md {
+        padding: $el-space-y-md $el-space-x-md;
+        font-size: $font-size-md;
+        line-height: $line-height-md;
+    }
+
+    &--sm {
+        padding: $el-space-y-md $el-space-x-sm;
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
+
+    @include generate-button-variants(primary secondary color-1 color-2 color-3 color-4 color-5 color-6 color-7 color-8, $self);
+}

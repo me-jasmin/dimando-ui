@@ -1,0 +1,59 @@
+/* -------------------------------------------------------
+    Colors
+------------------------------------------------------- */
+
+$grey: #777 !default;
+$primary: #0d6efd !default;
+$secondary: $grey !default;
+$color-1: #6610f2 !default;
+$color-2: #6f42c1 !default;
+$color-3: #d63384 !default;
+$color-4: #dc3545 !default;
+$color-5: #fd7e14 !default;
+$color-6: #ffc107 !default;
+$color-7: #198754 !default;
+$color-8: #0dcaf0 !default;
+
+/* -------------------------------------------------------
+    UI elements
+------------------------------------------------------- */
+
+$el-border-radius: 4px !default;
+$el-box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%) !default;
+
+$el-space-x-sm: 12px !default;
+$el-space-y-sm: 8px !default;
+
+$el-space-x-md: 15px !default;
+$el-space-y-md: 10px !default;
+
+$el-space-x-lg: 18px !default;
+$el-space-y-lg: 12px !default;
+
+/* -------------------------------------------------------
+    Typography
+------------------------------------------------------- */
+
+$font-size-sm: 11px !default;
+$line-height-sm: 16px !default;
+
+$font-size-md: 14px !default;
+$line-height-md: 20px !default;
+
+$font-size-lg: 18px !default;
+$line-height-lg: 24px !default;
+
+/* -------------------------------------------------------
+    Card background
+------------------------------------------------------- */
+
+$card-container-border-width: 1px !default;
+$card-container-padding: 10px !default;
+
+/* -------------------------------------------------------
+    Card
+------------------------------------------------------- */
+
+$card-content-padding: 10px !default;
+$card-content-title-font-size: 20px !default;
+$card-content-title-line-height: 30px !default;

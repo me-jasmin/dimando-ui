@@ -1,0 +1,146 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open%20Sans&amp;family=Raleway%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&amp;display=swap');
+
+html {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: var(--page-background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1em 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    margin: 0 0 1em;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+small {
+    font-size: 12px;
+}
+
+hr {
+    margin: 4em 0;
+}
+
+code {
+    padding: 3px 5px;
+    margin: 0 2px;
+    font-size: 13px;
+    line-height: 1;
+    color: rgb(46 52 56 / 90%);
+    background-color: #f7fafc;
+    border: 1px solid #ecf4f9;
+    border-radius: 3px;
+}
+
+pre {
+    display: block;
+    margin: 1em 0;
+    font-family: monospace;
+    white-space: pre;
+}
+
+pre code {
+    padding: 3px 5px;
+    margin: 0 2px;
+    font-size: 13px;
+    line-height: 2;
+    color: rgb(46 52 56 / 90%);
+    background-color: #f7fafc;
+    border: 1px solid #ecf4f9;
+    border-radius: 3px;
+}
+
+p {
+    margin: 1.2em 0;
+    font-size: $font-size-md;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &:first-of-type {
+        margin: 0 0 1.2em;
+    }
+}
+
+blockquote {
+    padding: 0 15px;
+    margin: 16px 0;
+    font-size: 16px;
+    border-left: 4px solid #d9e8f2;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    > p {
+        &::before {
+            content: open-quote;
+        }
+
+        &::after {
+            content: close-quote;
+        }
+    }
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul,
+ol {
+    padding-left: 1.4em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+
+    li {
+        padding-left: 0.4em;
+        margin-top: 0.6em;
+        margin-bottom: 0.6em;
+
+        &::marker {
+            font-size: 20px;
+            color: #d9e8f2;
+        }
+    }
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+}

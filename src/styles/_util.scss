@@ -1,0 +1,174 @@
+@use 'sass:list';
+@use 'sass:string';
+@use 'sass:color';
+
+/* -------------------------------------------------------
+    Animations
+------------------------------------------------------- */
+
+/**
+  * Transition and will-change mixin
+  * @include add-transition(...)
+  * @param $properties - any valid css property that can be animated
+  * @param $duration - animation duration
+  * @param $ease - animation easing
+  * @param $delay - animation delay
+  * @return single transition and will-change property with single or grouped animated propertes
+  *
+  * @example
+  * @include add-transition(border-color color transform background-color, 500ms, ease-in-out);
+  * ... {
+  *     transition: border-color 500ms ease-in-out 0ms, color 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms, background-color 500ms ease-in-out 0ms;
+  *     will-change: border-color, color, transform, background-color;
+  * }
+*/
+
+@mixin add-transition($properties: all, $duration: 100ms, $ease: ease, $delay: 0ms) {
+    $value: ();
+    $prop: ();
+
+    @each $property in $properties {
+        @if length($value) > 0 {
+            $value: list.append($value, #{$property} $duration $ease $delay, $separator: comma);
+            $prop: list.append($prop, #{$property}, $separator: comma);
+        } @else {
+            $value: list.append($value, #{$property} $duration $ease $delay);
+            $prop: list.append($prop, #{$property});
+        }
+    }
+
+    transition: $value;
+    will-change: $prop;
+}
+
+/* -------------------------------------------------------
+    Color helpers
+------------------------------------------------------- */
+
+/**
+  * Generate light and dark shades based on a provided color
+  * mix-color(...)
+  * @param $direction - light or dark
+  * @param $color - base color
+  * @param $step - persentage of color mixing
+  * @return color that is darker or lighter based on the provided color and step
+  *
+  * @example
+  * mix-color(light, #ccc, 10%)
+  * #5f5f5f
+*/
+
+@function mix-color($direction, $color, $step) {
+    @if $direction == light {
+        @return mix(#fff, $color, $step);
+    }
+
+    @if $direction == dark {
+        @return mix(#000, $color, $step);
+    }
+}
+
+@mixin generate-button-variants($colors, $self) {
+    @each $color in $colors {
+        &--#{$color}#{$self}--solid {
+            color: var(--btn-#{$color}-text);
+            background-color: var(--btn-#{$color}-background-color);
+            border-color: var(--btn-#{$color}-background-color);
+
+            &:not(:disabled, .disabled):hover {
+                background-color: var(--btn-#{$color}-hover-background-color);
+                border-color: var(--btn-#{$color}-hover-background-color);
+            }
+
+            &:not(:disabled, .disabled):active {
+                background-color: var(--btn-#{$color}-active-background-color);
+                border-color: var(--btn-#{$color}-active-background-color);
+            }
+
+            &:not(:disabled, .disabled):focus {
+                background-color: var(--btn-#{$color}-focus-color);
+                border-color: var(--btn-#{$color}-focus-color);
+            }
+
+            &:disabled {
+                color: var(--btn-#{$color}-disabled-text);
+                background-color: var(--btn-#{$color}-disabled-background-color);
+                border-color: var(--btn-#{$color}-disabled-background-color);
+            }
+        }
+
+        &--#{$color}#{$self}--link {
+            color: var(--btn-#{$color}-background-color);
+            border-color: transparent;
+            background-color: transparent;
+
+            &:not(:disabled, .disabled):hover {
+                color: var(--btn-#{$color}-hover-background-color);
+                text-decoration: underline;
+            }
+
+            &:not(:disabled, .disabled):active {
+                color: var(--btn-#{$color}-active-background-color);
+                border-color: transparent;
+            }
+
+            &:not(:disabled, .disabled):focus {
+                color: var(--btn-#{$color}-focus-color);
+                border-color: transparent;
+            }
+
+            &:disabled {
+                color: var(--btn-#{$color}-disabled-text);
+                border-color: transparent;
+            }
+        }
+
+        &--#{$color}#{$self}--subtle {
+            color: var(--btn-#{$color}-text);
+            background-color: rgb(from var(--btn-#{$color}-background-color) r g b / 20%);
+            border-color: transparent;
+
+            &:not(:disabled, .disabled):hover {
+                background-color: rgb(from var(--btn-#{$color}-hover-background-color) r g b / 80%);
+            }
+
+            &:not(:disabled, .disabled):active {
+                background-color: rgba(from var(--btn-#{$color}-active-background-color) r g b / 30%);
+            }
+
+            &:not(:disabled, .disabled):focus {
+                background-color: rgba(from var(--btn-#{$color}-focus-color) r g b / 40%);
+            }
+
+            &:disabled {
+                color: rgba(from var(--btn-#{$color}-disabled-text) r g b / 10%);
+                background-color: rgba(from var(--btn-#{$color}-disabled-background-color) r g b / 10%);
+            }
+        }
+
+        &--#{$color}#{$self}--outline {
+            color: var(--btn-#{$color}-background-color);
+            border-color: var(--btn-#{$color}-background-color);
+            border: 1px solid;
+
+            &:not(:disabled, .disabled):hover {
+                border-color: var(--btn-#{$color}-hover-background-color);
+                color: var(--btn-#{$color}-hover-background-color);
+            }
+
+            &:not(:disabled, .disabled):active {
+                border-color: var(--btn-#{$color}-active-background-color);
+                color: var(--btn-#{$color}-active-background-color);
+            }
+
+            &:not(:disabled, .disabled):focus {
+                border-color: var(--btn-#{$color}-focus-color);
+            }
+
+            &:disabled {
+                color: var(--btn-#{$color}-disabled-text);
+                border-color: var(--btn-#{$color}-disabled-background-color);
+            }
+        }
+    }
+}

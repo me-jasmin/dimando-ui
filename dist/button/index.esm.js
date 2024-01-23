@@ -1,0 +1,1 @@
+import e from"react";const a=({children:a,size:t="md",appearance:r="primary",className:o,onClick:c,shape:n="default",isDarkMode:s=!1,...l})=>e.createElement("button",{type:"button",className:`button ${t} ${r} ${n} ${!0===s&&"dark"} ${o}`,onClick:c,...l},a);export{a as default};

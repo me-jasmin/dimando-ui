@@ -1,6 +1,6 @@
-import Alert, { type AlertProps } from './alert';
+import CardContainer, { type CardContainerProps } from './card-container';
 import Button, { type ButtonProps } from './button';
-import ContentCard, { type ContentCardProps } from './content-card';
+import Card, { type CardProps } from './card';
 
-export { Alert, Button, ContentCard };
-export type { AlertProps, ButtonProps, ContentCardProps };
+export { CardContainer, Button, Card };
+export type { CardContainerProps, ButtonProps, CardProps };
